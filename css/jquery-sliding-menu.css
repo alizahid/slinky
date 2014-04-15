@@ -1,0 +1,28 @@
+
+	/*
+	 *
+	 *	jQuery Sliding Menu Plugin
+	 *	Mobile app list-style navigation in the browser
+	 *
+	 *	Written by Ali Zahid
+	 *	http://designplox.com/jquery-sliding-menu
+	 *
+	 */
+
+.sliding-menu { background: #7F8C8D; overflow: hidden; position: relative; }
+
+	.sliding-menu ul { float: left; margin: 0; }
+
+		.sliding-menu li { list-style: none; margin: 0; }
+
+			.sliding-menu a { color: #FFF; display: block; padding: 1rem; }
+
+				.sliding-menu a:hover { background: #333; }
+
+				.sliding-menu a.nav:after { content: '\3009'; float: right; margin-left: 1rem; }
+
+				.sliding-menu a.back { background: #555; }
+
+					.sliding-menu a.back:before { content: '\3008'; float: left; margin-right: 1rem; }
+
+					.sliding-menu a.back:after { display: none; }

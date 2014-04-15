@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>jQuery Sliding Menu Plugin</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-sliding-menu.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-sliding-menu.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function()
+			{
+				var data = [
+					{
+						"label": "Item 1",
+						"children": [
+							{
+								"label": "Item I",
+								"href": "#"
+							},
+							{
+								"label": "Item II",
+								"children": [
+									{
+										"label": "Item A",
+										"href": "#"
+									},
+									{
+										"label": "Item B",
+										"href": "#"
+									},
+									{
+										"label": "Item C",
+										"href": "#"
+									},
+									{
+										"label": "Item D",
+										"href": "#"
+									}
+								]
+							}
+						]
+					},
+					{
+						"label": "Item 2",
+						"href": "#"
+					},
+					{
+						"label": "Item 3",
+						"href": "#"
+					},
+					{
+						"label": "Item 4",
+						"href": "#"
+					},
+					{
+						"label": "Item 5",
+						"children": [
+							{
+								"label": "Item I",
+								"href": "#"
+							},
+							{
+								"label": "Item II",
+								"href": "#"
+							},
+							{
+								"label": "Item III",
+								"children": [
+									{
+										"label": "Item A",
+										"href": "#"
+									},
+									{
+										"label": "Item B",
+										"href": "#"
+									},
+									{
+										"label": "Item C",
+										"href": "#"
+									},
+									{
+										"label": "Item D",
+										"href": "#"
+									}
+								]
+							}
+						]
+					}
+				];
+
+				$('#menu').menu(data);
+
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<h1>jQuery Sliding Menu</h1>
+			<p>Mobile-like list-based sliding navigation menu</p>
+			<h2>Demo</h2>
+			<div id="menu">
+			</div>
+			<h2>Usage</h2>
+			<pre>$('#menu').menu(data);</pre>
+			<p>Where <em>data</em> is the JSON / JavaScript in the following format;</p>
+			<h2>Data</h2>
+			<pre>[
+	{
+		"label": "Item 1",
+		"children": [
+			{
+				"label": "Item I",
+				"href": "#"
+			},
+			{
+				"label": "Item II",
+				"children": [
+					{
+						"label": "Item A",
+						"href": "#"
+					},
+					{
+						"label": "Item B",
+						"href": "#"
+					},
+					{
+						"label": "Item C",
+						"href": "#"
+					},
+					{
+						"label": "Item D",
+						"href": "#"
+					}
+				]
+			}
+		]
+	},
+	{
+		"label": "Item 2",
+		"href": "#"
+	},
+	{
+		"label": "Item 3",
+		"href": "#"
+	},
+	{
+		"label": "Item 4",
+		"href": "#"
+	},
+	{
+		"label": "Item 5",
+		"children": [
+			{
+				"label": "Item I",
+				"href": "#"
+			},
+			{
+				"label": "Item II",
+				"href": "#"
+			},
+			{
+				"label": "Item III",
+				"children": [
+					{
+						"label": "Item A",
+						"href": "#"
+					},
+					{
+						"label": "Item B",
+						"href": "#"
+					},
+					{
+						"label": "Item C",
+						"href": "#"
+					},
+					{
+						"label": "Item D",
+						"href": "#"
+					}
+				]
+			}
+		]
+	}
+]</pre>
+			<h2>Coming soon</h2>
+			<p>Turn nested HTML lists into a menu</p>
+		</div>
+	</body>
+</html>
