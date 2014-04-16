@@ -1,4 +1,4 @@
 jquery-sliding-menu
 ===================
 
-Mobile-like list-based sliding navigation menu
+http://alizahid.github.io/jquery-sliding-menu/
