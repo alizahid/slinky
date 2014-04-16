@@ -12,86 +12,7 @@
 
 			$(document).ready(function()
 			{
-				var data = [
-					{
-						"label": "Item 1",
-						"children": [
-							{
-								"label": "Item I",
-								"href": "#"
-							},
-							{
-								"label": "Item II",
-								"children": [
-									{
-										"label": "Item A",
-										"href": "#"
-									},
-									{
-										"label": "Item B",
-										"href": "#"
-									},
-									{
-										"label": "Item C",
-										"href": "#"
-									},
-									{
-										"label": "Item D",
-										"href": "#"
-									}
-								]
-							}
-						]
-					},
-					{
-						"label": "Item 2",
-						"href": "#"
-					},
-					{
-						"label": "Item 3",
-						"href": "#"
-					},
-					{
-						"label": "Item 4",
-						"href": "#"
-					},
-					{
-						"label": "Item 5",
-						"children": [
-							{
-								"label": "Item I",
-								"href": "#"
-							},
-							{
-								"label": "Item II",
-								"href": "#"
-							},
-							{
-								"label": "Item III",
-								"children": [
-									{
-										"label": "Item A",
-										"href": "#"
-									},
-									{
-										"label": "Item B",
-										"href": "#"
-									},
-									{
-										"label": "Item C",
-										"href": "#"
-									},
-									{
-										"label": "Item D",
-										"href": "#"
-									}
-								]
-							}
-						]
-					}
-				];
-
-				$('#menu').menu(data);
+				$('#menu').menu();
 
 			});
 
@@ -99,96 +20,215 @@
 	</head>
 
 	<body>
-		<div id="wrapper">
+		<section id="social">
+			<div id="github">
+				<iframe src="http://ghbtns.com/github-btn.html?user=alizahid&amp;repo=jquery-sliding-menu&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+			</div>
+			<div id="tweet">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-text="jQuery Sliding Menu - mobile-like, list-style, responsive sliding navigation menu" data-via="alizahid0" data-related="alizahid0">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		</section>
+		<header>
 			<h1>jQuery Sliding Menu</h1>
-			<p>Mobile-like list-based sliding navigation menu</p>
+			<p>The creatively named, mobile-like, list-style, responsive sliding navigation menu</p>
+		</header>
+		<section>
 			<h2>Demo</h2>
 			<div id="menu">
+				<ul>
+					<li>
+						<a href="#">Artists</a>
+						<ul>
+							<li>
+								<a href="#">Aerosmith</a>
+								<ul>
+									<li>
+										<a href="#">Get Your Wings</a>
+										<ul>
+											<li>
+												<a href="#">Train Kept A-Rollin'</a>
+											</li>
+											<li>
+												<a href="#">Same Old Song and Dance</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Eagles</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+										<ul>
+											<li>
+												<a href="#">Hotel California</a>
+											</li>
+											<li>
+												<a href="#">Pretty Maids All in a Row</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Led Zeppelin</a>
+								<ul>
+									<li>
+										<a href="#">Physical Graffiti</a>
+										<ul>
+											<li>
+												<a href="#">In My Time of Dying</a>
+											</li>
+											<li>
+												<a href="#">Houses of the Holy</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Albums</a>
+						<ul>
+							<li>
+								<a href="#">Get Your Wings</a>
+								<ul>
+									<li>
+										<a href="#">Train Kept A-Rollin'</a>
+									</li>
+									<li>
+										<a href="#">Same Old Song and Dance</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Hotel California</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+									</li>
+									<li>
+										<a href="#">Pretty Maids All in a Row</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Physical Graffiti</a>
+								<ul>
+									<li>
+										<a href="#">In My Time of Dying</a>
+									</li>
+									<li>
+										<a href="#">Houses of the Holy</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Songs</a>
+						<ul>
+							<li>
+								<a href="#">In My Time of Dying</a>
+							</li>
+							<li>
+								<a href="#">Houses of the Holy</a>
+							</li>
+							<li>
+								<a href="#">Hotel California</a>
+							</li>
+							<li>
+								<a href="#">Pretty Maids All in a Row</a>
+							</li>
+							<li>
+								<a href="#">Train Kept A-Rollin'</a>
+							</li>
+							<li>
+								<a href="#">Same Old Song and Dance</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Genres</a>
+						<ul>
+							<li>
+								<a href="#">Rock</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+									</li>
+									<li>
+										<a href="#">Pretty Maids All in a Row</a>
+									</li>
+									<li>
+										<a href="#">Train Kept A-Rollin'</a>
+									</li>
+									<li>
+										<a href="#">Same Old Song and Dance</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Hard rock</a>
+								<ul>
+									<li>
+										<a href="#">In My Time of Dying</a>
+									</li>
+									<li>
+										<a href="#">Houses of the Holy</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Settings</a>
+						<ul>
+							<li>
+								<a href="#">Profile</a>
+							</li>
+							<li>
+								<a href="#">Player</a>
+								<ul>
+									<li>
+										<a href="#">Volume</a>
+									</li>
+									<li>
+										<a href="#">Equalizer</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
+		</section>
+		<section>
 			<h2>Usage</h2>
-			<pre>$('#menu').menu(data);</pre>
-			<p>Where <em>data</em> is the JSON / JavaScript in the following format;</p>
-			<h2>Data</h2>
-			<pre>[
-	{
-		"label": "Item 1",
-		"children": [
-			{
-				"label": "Item I",
-				"href": "#"
-			},
-			{
-				"label": "Item II",
-				"children": [
-					{
-						"label": "Item A",
-						"href": "#"
-					},
-					{
-						"label": "Item B",
-						"href": "#"
-					},
-					{
-						"label": "Item C",
-						"href": "#"
-					},
-					{
-						"label": "Item D",
-						"href": "#"
-					}
-				]
-			}
-		]
-	},
-	{
-		"label": "Item 2",
-		"href": "#"
-	},
-	{
-		"label": "Item 3",
-		"href": "#"
-	},
-	{
-		"label": "Item 4",
-		"href": "#"
-	},
-	{
-		"label": "Item 5",
-		"children": [
-			{
-				"label": "Item I",
-				"href": "#"
-			},
-			{
-				"label": "Item II",
-				"href": "#"
-			},
-			{
-				"label": "Item III",
-				"children": [
-					{
-						"label": "Item A",
-						"href": "#"
-					},
-					{
-						"label": "Item B",
-						"href": "#"
-					},
-					{
-						"label": "Item C",
-						"href": "#"
-					},
-					{
-						"label": "Item D",
-						"href": "#"
-					}
-				]
-			}
-		]
-	}
-]</pre>
-			<h2>Coming soon</h2>
-			<p>Turn nested HTML lists into a menu</p>
-		</div>
+			<pre>$('#selector').menu(options);</pre>
+		</section>
+		<section>
+			<h2>Options</h2>
+			<table>
+				<tbody>
+					<tr>
+						<th>dataJSON</th>
+						<td>false</td>
+						<td>A JSON object to build the menu from. View sample <a href="https://gist.github.com/alizahid/10833297">here</a>.</td>
+					</tr>
+					<tr>
+						<th>backLabel</th>
+						<td>'Back'</td>
+						<td>Label for the back button. Set to <em>true</em> to use the link's own label.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<footer>
+			Developed and maintained by <a href="//twitter.com/alizahid0">Ali Zahid</a> under the <a href="http://opensource.org/licenses/MIT">MIT license</a>
+		</footer>
 	</body>
 </html>

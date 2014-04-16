@@ -13,14 +13,22 @@
 {
 	var usedIds = [];
 
-	$.fn.menu = function(data)
+	$.fn.menu = function(options)
 	{
 		var selector = this.selector;
+
+		var settings = $.extend(
+		{
+			dataJSON: false,
+			backLabel: 'Back'
+
+		}, options);
 
 		return this.each(function()
 		{
 			var self = this,
-				menu = $(self);
+				menu = $(self),
+				data;
 
 			if (menu.hasClass('sliding-menu'))
 			{
@@ -29,43 +37,71 @@
 
 			var menuWidth = menu.width();
 
-			data = process(data);
+			if (settings.dataJSON)
+			{
+				data = processJSON(settings.dataJSON);
+			}
+			else
+			{
+				data = process(menu);
+			}
 
-			menu.addClass('sliding-menu');
+			menu.empty().addClass('sliding-menu');
 
 			var rootPanel;
 
-			$(data).each(function(index, item)
+			if (settings.dataJSON)
 			{
-				var panel = $('<ul></ul>');
-
-				if (item.root)
+				$(data).each(function(index, item)
 				{
-					rootPanel = '#' + item.id;
-				}
+					var panel = $('<ul></ul>');
 
-				panel.attr('id', item.id);
-				panel.width(menuWidth);
+					if (item.root)
+					{
+						rootPanel = '#' + item.id;
+					}
 
-				$(item.children).each(function(index, item)
-				{
-					var link = $('<a></a>');
+					panel.attr('id', item.id);
+					panel.addClass('menu-panel');
+					panel.width(menuWidth);
 
-					link.attr('class', item.styleClass);
-					link.attr('href', item.href);
-					link.text(item.label);
+					$(item.children).each(function(index, item)
+					{
+						var link = $('<a></a>');
 
-					var li = $('<li></li>');
+						link.attr('class', item.styleClass);
+						link.attr('href', item.href);
+						link.text(item.label);
 
-					li.append(link);
+						var li = $('<li></li>');
 
-					panel.append(li);
+						li.append(link);
+
+						panel.append(li);
+
+					});
+
+					menu.append(panel);
 
 				});
+			}
+			else
+			{
+				$(data).each(function(index, item)
+				{
+					var panel = $(item);
 
-				menu.append(panel);
+					if (panel.hasClass('menu-panel-root'))
+					{
+						rootPanel = '#' + panel.attr('id');
+					}
 
-			});
+					panel.width(menuWidth);
+
+					menu.append(item);
+
+				});
+			}
 
 			rootPanel = $(rootPanel);
 			rootPanel.addClass('menu-panel-root');
@@ -89,16 +125,19 @@
 				{
 					e.preventDefault();
 				}
-				else if (href[0] == '#')
+				else if (href.indexOf('#menu-panel') == 0)
 				{
-					var target = $(href);
-
-					var isBack = $(this).hasClass('back');
-
-					var marginLeft = parseInt(wrapper.css('margin-left'));
+					var target = $(href),
+						isBack = $(this).hasClass('back'),
+						marginLeft = parseInt(wrapper.css('margin-left'));
 
 					if (isBack)
 					{
+						if (href == '#menu-panel-back')
+						{
+							target = currentPanel.prev();
+						}
+
 						wrapper.animate(
 						{
 							marginLeft: marginLeft + menuWidth
@@ -109,7 +148,14 @@
 					{
 						target.insertAfter(currentPanel);
 
-						$('.back', target).text(label);
+						if (settings.backLabel === true)
+						{
+							$('.back', target).text(label);
+						}
+						else
+						{
+							$('.back', target).text(settings.backLabel);
+						}
 
 						wrapper.animate(
 						{
@@ -135,7 +181,46 @@
 
 		});
 
-		function process(data, parent)
+		function process(data)
+		{
+			var ul = $('ul', data),
+				panels = [];
+
+			$(ul).each(function(index, item)
+			{
+				var panel = $(item),
+					handler = panel.prev(),
+					id = getNewId();
+
+				if (handler.length == 1)
+				{
+					handler.addClass('nav').attr('href', '#menu-panel-' + id);
+				}
+
+				panel.attr('id', 'menu-panel-' + id);
+
+				if (index == 0)
+				{
+					panel.addClass('menu-panel-root');
+				}
+				else
+				{
+					panel.addClass('menu-panel');
+
+					var li = $('<li></li>'),
+						back = $('<a></a>').addClass('back').attr('href', '#menu-panel-back');
+
+					panel.prepend(back);
+				}
+
+				panels.push(item);
+
+			});
+
+			return panels;
+		}
+
+		function processJSON(data, parent)
 		{
 			var root = { id: 'menu-panel-' + getNewId(), children: [], root: (parent ? false : true) },
 				panels = [];
@@ -144,7 +229,6 @@
 			{
 				root.children.push(
 				{
-					label: 'Back',
 					styleClass: 'back',
 					href: '#' + parent.id
 
@@ -157,7 +241,7 @@
 
 				if (item.children)
 				{
-					var panel = process(item.children, root);
+					var panel = processJSON(item.children, root);
 
 					item.href = '#' + panel[0].id;
 					item.styleClass = 'nav';

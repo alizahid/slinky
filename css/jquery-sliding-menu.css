@@ -9,20 +9,18 @@
 	 *
 	 */
 
-.sliding-menu { background: #7F8C8D; overflow: hidden; position: relative; }
+.sliding-menu { overflow: hidden; position: relative; }
 
 	.sliding-menu ul { float: left; margin: 0; }
 
 		.sliding-menu li { list-style: none; margin: 0; }
 
-			.sliding-menu a { color: #FFF; display: block; padding: 1rem; }
+			.sliding-menu a { display: block; padding: 1em; }
 
-				.sliding-menu a:hover { background: #333; }
+				.sliding-menu a:hover { background: #333; color: #FFF; }
 
-				.sliding-menu a.nav:after { content: '\3009'; float: right; margin-left: 1rem; }
+				.sliding-menu a.nav:before { content: '\3009'; float: right; margin-left: 1em; }
 
-				.sliding-menu a.back { background: #555; }
+				.sliding-menu a.back { background: #555; color: #FFF; }
 
-					.sliding-menu a.back:before { content: '\3008'; float: left; margin-right: 1rem; }
-
-					.sliding-menu a.back:after { display: none; }
+					.sliding-menu a.back:before { content: '\3008'; float: left; margin-right: 1em; }
