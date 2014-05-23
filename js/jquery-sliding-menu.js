@@ -64,6 +64,7 @@
 					panel.attr('id', item.id);
 					panel.addClass('menu-panel');
 					panel.width(menuWidth);
+<<<<<<< HEAD
 
 					$(item.children).each(function(index, item)
 					{
@@ -77,6 +78,21 @@
 
 						li.append(link);
 
+=======
+
+					$(item.children).each(function(index, item)
+					{
+						var link = $('<a></a>');
+
+						link.attr('class', item.styleClass);
+						link.attr('href', item.href);
+						link.text(item.label);
+
+						var li = $('<li></li>');
+
+						li.append(link);
+
+>>>>>>> master
 						panel.append(li);
 
 					});
@@ -121,6 +137,13 @@
 				var href = $(this).attr('href'),
 					label = $(this).text();
 
+				if (wrapper.is(':animated'))
+				{
+					e.preventDefault();
+
+					return;
+				}
+
 				if (href == '#')
 				{
 					e.preventDefault();
@@ -138,7 +161,11 @@
 							target = currentPanel.prev();
 						}
 
+<<<<<<< HEAD
 						wrapper.animate(
+=======
+						wrapper.stop(true, true).animate(
+>>>>>>> master
 						{
 							marginLeft: marginLeft + menuWidth
 
@@ -157,7 +184,7 @@
 							$('.back', target).text(settings.backLabel);
 						}
 
-						wrapper.animate(
+						wrapper.stop(true, true).animate(
 						{
 							marginLeft: marginLeft - menuWidth
 
@@ -166,7 +193,7 @@
 
 					currentPanel = target;
 
-					menu.animate(
+					menu.stop(true, true).animate(
 					{
 						height: target.height()
 
