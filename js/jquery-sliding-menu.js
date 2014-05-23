@@ -64,7 +64,6 @@
 					panel.attr('id', item.id);
 					panel.addClass('menu-panel');
 					panel.width(menuWidth);
-<<<<<<< HEAD
 
 					$(item.children).each(function(index, item)
 					{
@@ -78,21 +77,6 @@
 
 						li.append(link);
 
-=======
-
-					$(item.children).each(function(index, item)
-					{
-						var link = $('<a></a>');
-
-						link.attr('class', item.styleClass);
-						link.attr('href', item.href);
-						link.text(item.label);
-
-						var li = $('<li></li>');
-
-						li.append(link);
-
->>>>>>> master
 						panel.append(li);
 
 					});
@@ -161,11 +145,7 @@
 							target = currentPanel.prev();
 						}
 
-<<<<<<< HEAD
-						wrapper.animate(
-=======
 						wrapper.stop(true, true).animate(
->>>>>>> master
 						{
 							marginLeft: marginLeft + menuWidth
 
