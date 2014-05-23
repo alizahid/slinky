@@ -121,6 +121,13 @@
 				var href = $(this).attr('href'),
 					label = $(this).text();
 
+				if (wrapper.is(':animated'))
+				{
+					e.preventDefault();
+
+					return;
+				}
+
 				if (href == '#')
 				{
 					e.preventDefault();
@@ -138,7 +145,7 @@
 							target = currentPanel.prev();
 						}
 
-						wrapper.animate(
+						wrapper.stop(true, true).animate(
 						{
 							marginLeft: marginLeft + menuWidth
 
@@ -157,7 +164,7 @@
 							$('.back', target).text(settings.backLabel);
 						}
 
-						wrapper.animate(
+						wrapper.stop(true, true).animate(
 						{
 							marginLeft: marginLeft - menuWidth
 
@@ -166,7 +173,7 @@
 
 					currentPanel = target;
 
-					menu.animate(
+					menu.stop(true, true).animate(
 					{
 						height: target.height()
 
