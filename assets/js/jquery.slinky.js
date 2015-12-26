@@ -21,12 +21,12 @@ Published under the MIT license
 
 		var move = function (menu, next, callback) {
 			var width = menu.outerWidth(),
-				left = Math.round(Math.abs(parseInt(menu.css('left'))) / width) || 0;
+				left = Math.round(parseInt(menu[0].style.left)) || 0;
 
 			// Use multiples of 100% for responsive animation
 
 			menu.stop(true, true).animate({
-				left: -Math.abs((next ? ++left : --left) * 100) + '%'
+				left: -Math.abs(next ? left - 100 : left + 100) + '%'
 			}, settings.speed, function () {
 				// Callback after animation is finished
 
