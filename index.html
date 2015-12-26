@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>jQuery Sliding Menu Plugin</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/jquery-sliding-menu.css">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery-sliding-menu.js"></script>
-		<script type="text/javascript">
 
-			$(document).ready(function()
-			{
-				$('#menu').menu();
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Slinky - jQuery sliding menu</title>
+	<link rel="stylesheet" href="assets/css/atlas-typewriter/atlas-typewriter-web-regular.css">
+	<link rel="stylesheet" href="assets/css/master.css?v2">
+	<link rel="stylesheet" href="assets/css/jquery.slinky.css?v2">
+</head>
 
-			});
-
-		</script>
-	</head>
-
-	<body>
-		<section id="social">
-			<div id="github">
-				<iframe src="http://ghbtns.com/github-btn.html?user=alizahid&amp;repo=jquery-sliding-menu&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-			</div>
-			<div id="tweet">
-				<a href="https://twitter.com/share" class="twitter-share-button" data-text="jQuery Sliding Menu - mobile-like, list-style, responsive sliding navigation menu" data-via="alizahid0" data-related="alizahid0">Tweet</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			</div>
-		</section>
+<body>
+	<div class="wrapper">
 		<header>
-			<h1>jQuery Sliding Menu</h1>
-			<p>The creatively named, mobile-like, list-style, responsive sliding navigation menu</p>
+			<h1>Slinky</h1>
+			<h2>jQuery sliding menu</h2>
+			<p>A light-weight, responsive, mobile-like menu plugin</p>
 		</header>
 		<section>
-			<h2>Demo</h2>
-			<div id="menu">
+			<h3>Demo</h3>
+			<div id="menu" class="slinky-menu">
 				<ul>
+					<li>
+						<a href="http://alizahid.net/">I'm an external URL</a>
+					</li>
 					<li>
 						<a href="#">Artists</a>
 						<ul>
@@ -207,28 +194,43 @@
 			</div>
 		</section>
 		<section>
-			<h2>Usage</h2>
-			<pre>$('#selector').menu(options);</pre>
+			<h3>Usage</h3>
+			<pre>$('.menu').slinky(options);</pre>
 		</section>
 		<section>
-			<h2>Options</h2>
+			<h3>Options</h3>
 			<table>
 				<tbody>
 					<tr>
-						<th>dataJSON</th>
-						<td>false</td>
-						<td>A JSON object to build the menu from. View sample <a href="https://gist.github.com/alizahid/10833297">here</a>.</td>
+						<th>label</th>
+						<td>'Back'</td>
+						<td>Label for the back button. Set to <em>true</em> to use the link's own label</td>
 					</tr>
 					<tr>
-						<th>backLabel</th>
-						<td>'Back'</td>
-						<td>Label for the back button. Set to <em>true</em> to use the link's own label.</td>
+						<th>speed</th>
+						<td>300</td>
+						<td>Animation speed in milliseconds</td>
+					</tr>
+					<tr>
+						<th>resize</th>
+						<td>true</td>
+						<td>Resize menu height to match content</td>
 					</tr>
 				</tbody>
 			</table>
 		</section>
-		<footer>
-			Developed and maintained by <a href="//twitter.com/alizahid0">Ali Zahid</a> under the <a href="http://opensource.org/licenses/MIT">MIT license</a>
-		</footer>
-	</body>
+	</div>
+	<footer>
+		Made with <img src="assets/img/heart.svg"> by <a href="//twitter.com/alizahid0">Ali Zahid</a> &#183; Published under the <a href="http://opensource.org/licenses/MIT">MIT license</a>
+	</footer>
+</body>
+
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<script src="assets/js/jquery.slinky.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#menu').slinky();
+	});
+</script>
+
 </html>
