@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Atlas Typewriter';
+	src: url('atlas-typewriter-web-regular.eot');
+	src: url('atlas-typewriter-web-regular.eot?#iefix') format('embedded-opentype'), url('atlas-typewriter-web-regular.woff') format('woff'), url('atlas-typewriter-web-regular.ttf') format('truetype'), url('atlas-typewriter-web-regular.svg#atlas-typewriter-web-regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
