@@ -93,6 +93,14 @@ footer a:hover {
 	background: #FFF;
 	overflow: hidden;
 }
+.social {
+	margin: 2em auto;
+	overflow: hidden;
+}
+.github,
+.tweet {
+	float: left;
+}
 
 /* Responsive */
 
