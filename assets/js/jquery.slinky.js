@@ -60,10 +60,10 @@ Published under the MIT license
 				// Create a link with label from parent
 
 				$('li > ul', menu).each(function () {
-					var label = menu.parent().find('a').first().text(),
+					var label = $(this).parent().find('a').first().text(),
 						backLink = $('<a>').text(label).prop('href', '#').addClass('back');
 
-					menu.prepend(backLink);
+					$(this).prepend(backLink);
 				});
 			} else {
 				// Create a link with the label from settings
