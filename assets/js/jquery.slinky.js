@@ -85,6 +85,12 @@ Published under the MIT license
 					e.preventDefault();
 				}
 
+				// Cancel if already being animated
+
+				if (menu.is(':animated')) {
+					return;
+				}
+
 				// Animate forward or backward
 				// Resize menu height to match content, if required
 
