@@ -7,8 +7,8 @@ Published under the MIT license
 
 */
 
-;(function ($) {
-	$.fn.slinky = function (options) {
+;(function($) {
+	$.fn.slinky = function(options) {
 		// Setup plugin defaults
 
 		var settings = $.extend({
@@ -19,15 +19,15 @@ Published under the MIT license
 
 		// Convenience method for navigation animation
 
-		var move = function (menu, next, callback) {
+		var move = function(menu, next, callback) {
 			var width = menu.outerWidth(),
-				left = Math.round(parseInt(menu[0].style.left)) || 0;
+				left = Math.round(parseInt(menu.get(0).style.left)) || 0;
 
 			// Use multiples of 100% for responsive animation
 
 			menu.stop(true, true).animate({
 				left: -Math.abs(next ? left - 100 : left + 100) + '%'
-			}, settings.speed, function () {
+			}, settings.speed, function() {
 				// Callback after animation is finished
 
 				if (typeof callback === 'function') {
@@ -38,13 +38,13 @@ Published under the MIT license
 
 		// Convenience method for resizing menu
 
-		var resize = function (menu, content) {
+		var resize = function(menu, content) {
 			menu.stop(true, true).animate({
 				height: content.outerHeight()
 			}, settings.speed);
 		};
 
-		return this.each(function () {
+		return this.each(function() {
 			// The root node is where animation happens
 
 			var menu = $(this),
@@ -59,7 +59,7 @@ Published under the MIT license
 			if (settings.label === true) {
 				// Create a link with label from parent
 
-				$('li > ul', menu).each(function () {
+				$('li > ul', menu).each(function() {
 					var label = $(this).parent().find('a').first().text(),
 						backLink = $('<a>').text(label).prop('href', '#').addClass('back');
 
@@ -75,7 +75,7 @@ Published under the MIT license
 
 			// Setup navigation
 
-			$('a', menu).on('click', function (e) {
+			$('a', menu).on('click', function(e) {
 				var a = $(this);
 
 				// Disable navigation if link has hash
@@ -103,7 +103,7 @@ Published under the MIT license
 						resize(menu, a.next());
 					}
 				} else if (a.hasClass('back')) {
-					move(root, false, function () {
+					move(root, false, function() {
 						a.parent().hide();
 					});
 
