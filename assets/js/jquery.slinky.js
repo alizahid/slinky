@@ -25,23 +25,19 @@ Published under the MIT license
 
 			// Use multiples of 100% for responsive animation
 
-			menu.stop(true, true).animate({
-				left: -Math.abs(next ? left - 100 : left + 100) + '%'
-			}, settings.speed, function() {
-				// Callback after animation is finished
+			menu.css('left', -Math.abs(next ? left - 100 : left + 100) + '%');
 
-				if (typeof callback === 'function') {
-					callback();
-				}
-			});
+			// Callback after animation is finished
+
+			if (typeof callback === 'function') {
+				setTimeout(callback, settings.speed);
+			}
 		};
 
 		// Convenience method for resizing menu
 
 		var resize = function(menu, content) {
-			menu.stop(true, true).animate({
-				height: content.outerHeight()
-			}, settings.speed);
+			menu.height(content.outerHeight());
 		};
 
 		return this.each(function() {
@@ -83,12 +79,6 @@ Published under the MIT license
 
 				if (/#/.test(this.href)) {
 					e.preventDefault();
-				}
-
-				// Cancel if already being animated
-
-				if (menu.is(':animated')) {
-					return;
 				}
 
 				// Animate forward or backward

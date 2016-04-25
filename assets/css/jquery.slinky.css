@@ -2,11 +2,19 @@
 
 .slinky-menu {
 	overflow: hidden;
+	transform: translateZ(0);
+	transition: all 300ms ease;
+	-webkit-transform: translateZ(0);
+	-webkit-transition: all 300ms ease;
 }
 
 .slinky-menu > ul {
 	left: 0;
 	position: relative;
+	transform: translateZ(0);
+	transition: all 300ms ease;
+	-webkit-transform: translateZ(0);
+	-webkit-transition: all 300ms ease;
 }
 
 .slinky-menu ul,
