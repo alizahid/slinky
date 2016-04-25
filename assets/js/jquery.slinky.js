@@ -1,9 +1,9 @@
 /*
 
-Slinky
-A light-weight, responsive, mobile-like menu plugin for jQuery
-Made by Ali Zahid
-Published under the MIT license
+	Slinky
+	A light-weight, responsive, mobile-like navigation menu plugin for jQuery
+	Built by Ali Zahid
+	Published under the MIT license
 
 */
 

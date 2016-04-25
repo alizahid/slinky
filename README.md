@@ -4,11 +4,11 @@ jQuery sliding menu
 
 A light-weight, responsive, mobile-like menu plugin
 
-[Demo](http://alizahid.github.io/slinky)
+### [Demo](http://alizahid.github.io/slinky)
 
 ### Installation
 
-Download the [latest version](https://github.com/alizahid/slinky/archive/master.zip). The files you need are;
+Download the [latest version](https://github.com/alizahid/slinky/archive/gh-pages.zip). The files you need are;
 
 - assets/js/jquery.slinky.js
 - assets/css/jquery.slinky.css
