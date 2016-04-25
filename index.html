@@ -216,6 +216,11 @@
 						<td>Label for the back button. Set to <em>true</em> to use the link's own label</td>
 					</tr>
 					<tr>
+						<th>title</th>
+						<td>false</td>
+						<td>Set to <em>true</em> to show title of current menu level</td>
+					</tr>
+					<tr>
 						<th>speed</th>
 						<td>300</td>
 						<td>Animation speed in milliseconds</td>
@@ -238,7 +243,9 @@
 <script src="assets/js/jquery.slinky.js"></script>
 <script>
 	$(document).ready(function() {
-		$('#menu').slinky();
+		$('#menu').slinky({
+			title: true
+		});
 	});
 </script>
 

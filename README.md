@@ -22,5 +22,6 @@ Download the [latest version](https://github.com/alizahid/slinky/archive/master.
 Option | Default value | Description
 ------ | ------------- | -----------
 `label` | 'Back' | Label for the back button. Set to `true` to use the link's own label
+`title` | `false` | Set to `true` to show title of current menu level
 `speed` | `300` | Animation speed in milliseconds
 `resize` | `true` | Resize menu height to match content

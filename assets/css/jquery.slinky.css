@@ -38,7 +38,32 @@
 	top: 0;
 }
 
+.slinky-menu .header {
+	position: relative;
+}
+
+.slinky-menu h2 ~ a.back {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.slinky-menu h2 {
+	font-size: 1em;
+	margin: 0;
+	text-align: center;
+}
+
 /* Default theme */
+
+.slinky-menu .header {
+	background: #AAA;
+}
+
+.slinky-menu h2 {
+	color: #FFF;
+	padding: 1em;
+}
 
 .slinky-menu a {
 	background: #AAA;

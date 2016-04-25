@@ -13,6 +13,7 @@ Published under the MIT license
 
 		var settings = $.extend({
 			label: 'Back',
+			title: false,
 			speed: 300,
 			resize: true
 		}, options);
@@ -20,8 +21,7 @@ Published under the MIT license
 		// Convenience method for navigation animation
 
 		var move = function(menu, next, callback) {
-			var width = menu.outerWidth(),
-				left = Math.round(parseInt(menu.get(0).style.left)) || 0;
+			var left = Math.round(parseInt(menu.get(0).style.left)) || 0;
 
 			// Use multiples of 100% for responsive animation
 
@@ -55,23 +55,40 @@ Published under the MIT license
 
 			$('a + ul', menu).prev().addClass('next');
 
-			// Add back links with correct labels
+			// Add header for back button and title
 
-			if (settings.label === true) {
+			$('li > ul', menu).prepend('<li class="header">');
+
+			// Add title
+
+			if (settings.title === true) {
+				// Create a label with title from the parent
+
+				$('li > ul', menu).each(function() {
+					var label = $(this).parent().find('a').first().text(),
+						title = $('<h2>').text(label);
+
+					$('> .header', this).append(title);
+				});
+			}
+
+			// Add back links with appropriate labels
+
+			if (!settings.title && settings.label === true) {
 				// Create a link with label from parent
 
 				$('li > ul', menu).each(function() {
 					var label = $(this).parent().find('a').first().text(),
 						backLink = $('<a>').text(label).prop('href', '#').addClass('back');
 
-					$(this).prepend(backLink);
+					$('> .header', this).append(backLink);
 				});
 			} else {
 				// Create a link with the label from settings
 
 				var backLink = $('<a>').text(settings.label).prop('href', '#').addClass('back');
 
-				$('li > ul', menu).prepend(backLink);
+				$('.header', menu).append(backLink);
 			}
 
 			// Setup navigation
@@ -99,11 +116,11 @@ Published under the MIT license
 					}
 				} else if (a.hasClass('back')) {
 					move(root, false, function() {
-						a.parent().hide();
+						a.parent().parent().hide();
 					});
 
 					if (settings.resize) {
-						resize(menu, a.parent().parents('ul'));
+						resize(menu, a.parent().parent().parents('ul'));
 					}
 				}
 			});
