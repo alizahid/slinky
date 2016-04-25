@@ -46,6 +46,11 @@ Published under the MIT license
 			var menu = $(this),
 				root = menu.children().first();
 
+			// Set CSS animation duration
+
+			menu.css('transition-duration', settings.speed + 'ms');
+			root.css('transition-duration', settings.speed + 'ms');
+
 			// Add .next class to links with sub menus
 
 			$('a + ul', menu).prev().addClass('next');
