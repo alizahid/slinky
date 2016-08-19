@@ -8,6 +8,8 @@
 */
 
 ;(function($) {
+	var lastClick;
+
 	$.fn.slinky = function(options) {
 		// Setup plugin defaults
 
@@ -94,6 +96,12 @@
 			// Setup navigation
 
 			$('a', menu).on('click', function(e) {
+				if ((lastClick + settings.speed) > Date.now()) {
+					return;
+				}
+
+				lastClick = Date.now();
+
 				var a = $(this);
 
 				// Disable navigation if link has hash
