@@ -15,7 +15,7 @@ Download the [latest version](https://github.com/alizahid/slinky/archive/gh-page
 
 ### Bower
 
-	bower install slinky
+	bower install jquery-slinky
 
 Include these files;
 
@@ -25,7 +25,7 @@ Include these files;
 
 ### NPM
 
-	npm install slinky
+	npm install jquery-slinky
 
 Include these files;
 
