@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Slinky - jQuery sliding menu</title>
 	<link rel="stylesheet" href="assets/css/atlas-typewriter/atlas-typewriter-web-regular.css">
-	<link rel="stylesheet" href="assets/css/master.css?v2">
-	<link rel="stylesheet" href="assets/css/jquery.slinky.css?v2">
+	<link rel="stylesheet" href="assets/css/master.css?v3">
+	<link rel="stylesheet" href="dist/jquery.slinky.css?v3">
 </head>
 
 <body>
@@ -204,7 +204,7 @@
 		</section>
 		<section>
 			<h3>Usage</h3>
-			<pre>$('.menu').slinky(options);</pre>
+			<pre>var slinky = $(&#8230;).slinky(options);</pre>
 		</section>
 		<section>
 			<h3>Options</h3>
@@ -213,12 +213,12 @@
 					<tr>
 						<th>label</th>
 						<td>'Back'</td>
-						<td>Label for the back button. Set to <em>true</em> to use the link's own label</td>
+						<td>Label for the back button. Pass <em>true</em> to use the link's own label</td>
 					</tr>
 					<tr>
 						<th>title</th>
 						<td>false</td>
-						<td>Set to <em>true</em> to show title of current menu level</td>
+						<td>Pass <em>true</em> to show title of current menu level</td>
 					</tr>
 					<tr>
 						<th>speed</th>
@@ -228,10 +228,47 @@
 					<tr>
 						<th>resize</th>
 						<td>true</td>
-						<td>Resize menu height to match content</td>
+						<td>Resize menu height to match content on navigation</td>
 					</tr>
 				</tbody>
 			</table>
+		</section>
+		<section>
+			<h3>API</h3>
+			<h4>.home()</h4>
+			<p>Navigate back to the main menu</p>
+			<table>
+				<tbody>
+					<tr>
+						<th>animate</th>
+						<td>true</td>
+						<td>Pass <em>false</em> to skip animation</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>.jump()</h4>
+			<p>Navigate to a sub menu</p>
+			<table>
+				<tbody>
+					<tr>
+						<th colspan="2">to</th>
+						<td>Pass a selector for the <em>ul</em> element to jump to</td>
+					</tr>
+					<tr>
+						<th>animate</th>
+						<td>true</td>
+						<td>Pass <em>false</em> to skip animation</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>.destroy()</h4>
+			<p>Remove slinky</p>
+		</section>
+		<section>
+			<h3>Tips</h3>
+			<ul>
+				<li>Set <em>.active</em> on a <em>ul</em> element to jump there on init</li>
+			</ul>
 		</section>
 	</div>
 	<footer>
@@ -239,12 +276,12 @@
 	</footer>
 </body>
 
-<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
-<script src="assets/js/jquery.slinky.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="dist/jquery.slinky.js"></script>
 <script>
 	$(document).ready(function() {
 		$('#menu').slinky({
-			title: true
+			title: true,
 		});
 	});
 </script>

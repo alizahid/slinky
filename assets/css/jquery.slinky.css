@@ -4,8 +4,6 @@
 	overflow: hidden;
 	transform: translateZ(0);
 	transition: all 300ms ease;
-	-webkit-transform: translateZ(0);
-	-webkit-transition: all 300ms ease;
 }
 
 .slinky-menu > ul {
@@ -13,8 +11,6 @@
 	position: relative;
 	transform: translateZ(0);
 	transition: all 300ms ease;
-	-webkit-transform: translateZ(0);
-	-webkit-transition: all 300ms ease;
 }
 
 .slinky-menu ul,
@@ -56,7 +52,7 @@
 
 /* Default theme */
 
-.slinky-menu .header {
+.slinky-menu {
 	background: #AAA;
 }
 
@@ -65,8 +61,11 @@
 	padding: 1em;
 }
 
+.slinky-menu li {
+	line-height: 1;
+}
+
 .slinky-menu a {
-	background: #AAA;
 	border: none;
 	color: #FFF;
 	padding: 1em;

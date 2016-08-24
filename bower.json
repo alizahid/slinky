@@ -1,0 +1,20 @@
+{
+  "name": "slinky",
+  "version": "3.0.0",
+  "description": "A light-weight, responsive, mobile-like navigation menu plugin",
+  "main": "dist/jquery.slinky.js",
+  "authors": [
+    "Ali Zahid <ali.zahid@live.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "navigation",
+    "mobile"
+  ],
+  "homepage": "https://github.com/alizahid/slinky",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "slinky",
+  "version": "3.0.0",
+  "description": "A light-weight, responsive, mobile-like navigation menu plugin",
+  "main": "dist/jquery.slinky.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alizahid/slinky.git"
+  },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "navigation",
+    "mobile"
+  ],
+  "author": "Ali Zahid <ali.zahid@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alizahid/slinky/issues"
+  },
+  "homepage": "https://github.com/alizahid/slinky",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
