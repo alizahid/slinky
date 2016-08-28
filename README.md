@@ -43,7 +43,7 @@ Option | Default value | Description
 ------ | ------------- | -----------
 `label` | 'Back' | Label for the back button. Pass `true` to use the link's own label
 `title` | `false` | Pass `true` to show title of current menu level
-`speed` | `300` | Animation speed in milliseconds
+`speed` | `300` | Animation speed in `milliseconds`
 `resize` | `true` | Resize menu height to match content on navigation
 
 ## API
@@ -54,7 +54,7 @@ Navigate back to the main menu
 
 Option | Default value | Description
 ------ | ------------- | -----------
-`animate` | `true` | Pass false to skip animation
+`animate` | `true` | Pass `false` to skip animation
 
 ### .jump()
 
@@ -62,8 +62,8 @@ Navigate to a sub menu
 
 Option | Default value | Description
 ------ | ------------- | -----------
-`to` |  | Pass a selector for the ul element to jump to
-`animate` | `true` | Pass false to skip animation
+`to` |  | Pass a selector for the `ul` element to jump to
+`animate` | `true` | Pass `false` to skip animation
 
 ### .destroy()
 
