@@ -70,14 +70,14 @@
 
 		$('a', menu).on('click', function(e) {
 			if ((lastClick + settings.speed) > Date.now()) {
-				return;
+				return false;
 			}
 
 			lastClick = Date.now();
 
 			var a = $(this);
 
-			if (/#/.test(this.href)) {
+			if (/#/.test(this.href) || a.hasClass('next')) {
 				e.preventDefault();
 			}
 
