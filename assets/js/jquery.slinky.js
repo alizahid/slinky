@@ -77,7 +77,7 @@
 
 			var a = $(this);
 
-			if (/#/.test(this.href) || a.hasClass('next')) {
+			if (/\B#/.test(this.href) || a.hasClass('next')) {
 				e.preventDefault();
 			}
 
