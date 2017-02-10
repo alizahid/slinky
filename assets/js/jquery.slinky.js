@@ -147,7 +147,7 @@
 
 			if (count > 0) {
 				move(-count, function() {
-					active.removeClass('active');
+					active.removeClass('active').hide();
 				});
 
 				if (settings.resize) {
