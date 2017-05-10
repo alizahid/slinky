@@ -45,6 +45,10 @@ Option | Default value | Description
 `title` | `false` | Pass `true` to show title of current menu level
 `speed` | `300` | Animation speed in `milliseconds`
 `resize` | `true` | Resize menu height to match content on navigation
+`activeClass` | `active` | Class that's applied to the current menu level `<ul>`
+`headerClass` | `header` | Class name for the container for the back button and heading
+`headingTag` | `<h2>` | Tag that contains the heading
+`backFirst` | `false` | Optionally append the back button before the heading instead of after
 
 ## API
 

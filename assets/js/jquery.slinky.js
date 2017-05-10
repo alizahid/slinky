@@ -14,6 +14,10 @@
 			title: false,
 			speed: 300,
 			resize: true,
+			activeClass: 'active',
+			headerClass: 'header',
+			headingTag: '<h2>',
+			backFirst: false,
 		}, options);
 
 		var menu = $(this),
@@ -44,14 +48,14 @@
 
 		$('a + ul', menu).prev().addClass('next');
 
-		$('li > ul', menu).prepend('<li class="header">');
+		$('li > ul', menu).prepend('<li class="' + settings.headerClass + '">');
 
 		if (settings.title === true) {
 			$('li > ul', menu).each(function() {
 				var label = $(this).parent().find('a').first().text(),
-					title = $('<h2>').text(label);
+					title = $(settings.headingTag).text(label);
 
-				$('> .header', this).append(title);
+				$('> .' + settings.headerClass, this).append(title);
 			});
 		}
 
@@ -60,12 +64,20 @@
 				var label = $(this).parent().find('a').first().text(),
 					backLink = $('<a>').text(label).prop('href', '#').addClass('back');
 
-				$('> .header', this).append(backLink);
+				if (settings.backFirst) {
+					$('> .' + settings.headerClass, this).prepend(backLink);
+				} else {
+					$('> .' + settings.headerClass, this).append(backLink);
+				}
 			});
 		} else {
 			var backLink = $('<a>').text(settings.label).prop('href', '#').addClass('back');
 
-			$('.header', menu).append(backLink);
+			if (settings.backFirst) {
+				$('.' + settings.headerClass, menu).prepend(backLink);
+			} else {
+				$('.' + settings.headerClass, menu).append(backLink);
+			}
 		}
 
 		$('a', menu).on('click', function(e) {
@@ -77,14 +89,14 @@
 
 			var a = $(this);
 
-			if (/\B#/.test(this.href) || a.hasClass('next')) {
+			if (/\B#/.test(this.href) || a.hasClass('next') || a.hasClass('back')) {
 				e.preventDefault();
 			}
 
 			if (a.hasClass('next')) {
-				menu.find('.active').removeClass('active');
+				menu.find('.' + settings.activeClass).removeClass(settings.activeClass);
 
-				a.next().show().addClass('active');
+				a.next().show().addClass(settings.activeClass);
 
 				move(1);
 
@@ -93,9 +105,9 @@
 				}
 			} else if (a.hasClass('back')) {
 				move(-1, function() {
-					menu.find('.active').removeClass('active');
+					menu.find('.' + settings.activeClass).removeClass(settings.activeClass);
 
-					a.parent().parent().hide().parentsUntil(menu, 'ul').first().addClass('active');
+					a.parent().parent().hide().parentsUntil(menu, 'ul').first().addClass(settings.activeClass);
 				});
 
 				if (settings.resize) {
@@ -107,7 +119,7 @@
 		this.jump = function(to, animate) {
 			to = $(to);
 
-			var active = menu.find('.active');
+			var active = menu.find('.' + settings.activeClass);
 
 			if (active.length > 0) {
 				active = active.parentsUntil(menu, 'ul').length;
@@ -115,12 +127,12 @@
 				active = 0;
 			}
 
-			menu.find('ul').removeClass('active').hide();
+			menu.find('ul').removeClass(settings.activeClass).hide();
 
 			var menus = to.parentsUntil(menu, 'ul');
 
 			menus.show();
-			to.show().addClass('active');
+			to.show().addClass(settings.activeClass);
 
 			if (animate === false) {
 				transition(0);
@@ -142,7 +154,7 @@
 				transition(0);
 			}
 
-			var active = menu.find('.active'),
+			var active = menu.find('.' + settings.activeClass),
 				count = active.parentsUntil(menu, 'li').length;
 				
 			if (count > 0) {
@@ -153,7 +165,7 @@
 				});
 
 				move(-count, function() {
-					active.removeClass('active');
+					active.removeClass(settings.activeClass);
 				});
 
 				if (settings.resize) {
@@ -167,17 +179,17 @@
 		};
 
 		this.destroy = function() {
-			$('.header', menu).remove();
+			$('.' + settings.headerClass, menu).remove();
 			$('a', menu).removeClass('next').off('click');
 
 			menu.removeClass('slinky-menu').css('transition-duration', '');
 			root.css('transition-duration', '');
 		};
 
-		var active = menu.find('.active');
+		var active = menu.find('.' + settings.activeClass);
 
 		if (active.length > 0) {
-			active.removeClass('active');
+			active.removeClass(settings.activeClass);
 
 			this.jump(active, false);
 		}
