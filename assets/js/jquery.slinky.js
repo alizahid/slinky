@@ -156,8 +156,14 @@
 
 			var active = menu.find('.' + settings.activeClass),
 				count = active.parentsUntil(menu, 'li').length;
-
+				
 			if (count > 0) {
+
+				$.each(active.parentsUntil(menu, 'li'), function(index, val) {
+					var $this = $(this);
+					$this.find('ul').hide();
+				});
+
 				move(-count, function() {
 					active.removeClass(settings.activeClass);
 				});
