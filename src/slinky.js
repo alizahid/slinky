@@ -236,14 +236,14 @@ class Slinky {
     const to = $(target)
 
     // get all current active
-    const active = menu.find('.active').length
+    const active = menu.find('.active')
 
     // how many moves must we jump?
     let count = 0
 
     // this many
     // until we reach the parent list
-    if (active > 0) {
+    if (active.length > 0) {
       count = active.parentsUntil(menu, 'ul').length
     }
 
