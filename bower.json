@@ -1,20 +1,35 @@
 {
-  "name": "jquery-slinky",
-  "version": "3.0.0",
-  "description": "A light-weight, responsive, mobile-like navigation menu plugin",
-  "main": "dist/jquery.slinky.js",
-  "authors": [
-    "Ali Zahid <ali.zahid@live.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "jquery",
-    "plugin",
-    "navigation",
-    "mobile"
-  ],
-  "homepage": "https://github.com/alizahid/slinky",
-  "dependencies": {
-    "jquery": "^3.1.0"
-  }
+	"name": "jquery-slinky",
+	"description": "Rather sweet menus",
+	"version": "4.0.0",
+	"main": ["dist/slinky.min.js", "dist/slinky.min.css"],
+	"homepage": "https://alizahid.github.com/slinky",
+	"authors": [
+		{
+			"name": "Ali Zahid",
+			"email": "ali.zahid@live.com",
+			"homepage": "https://designplox.com/"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alizahid/slinky.git"
+	},
+	"license": "MIT",
+	"private": false,
+	"license": "MIT",
+	"keywords": [
+		"jquery",
+		"javascript",
+		"plugin",
+		"navigation",
+		"nav",
+		"menu",
+		"mobile",
+		"web",
+		"es6"
+	],
+	"dependencies": {
+		"jquery": "^3.2.1"
+	}
 }

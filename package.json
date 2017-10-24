@@ -1,31 +1,56 @@
 {
-  "name": "jquery-slinky",
-  "version": "3.0.0",
-  "description": "A light-weight, responsive, mobile-like navigation menu plugin",
-  "main": "dist/jquery.slinky.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alizahid/slinky.git"
-  },
-  "keywords": [
-    "jquery",
-    "plugin",
-    "navigation",
-    "mobile"
-  ],
-  "author": "Ali Zahid <ali.zahid@live.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alizahid/slinky/issues"
-  },
-  "homepage": "https://github.com/alizahid/slinky",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-uglify": "^2.0.0"
-  },
-  "dependencies": {
-    "jquery": "^3.1.0"
-  }
+	"name": "jquery-slinky",
+	"description": "Rather sweet menus",
+	"version": "4.0.0",
+	"main": "dist/slinky.min.js",
+	"homepage": "https://alizahid.github.com/slinky",
+	"author": {
+		"name": "Ali Zahid",
+		"email": "ali.zahid@live.com",
+		"url": "https://designplox.com/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alizahid/slinky.git"
+	},
+	"bugs": {
+		"url": "https://github.com/alizahid/slinky/issues"
+	},
+	"license": "MIT",
+	"private": false,
+	"keywords": [
+		"jquery",
+		"javascript",
+		"plugin",
+		"navigation",
+		"nav",
+		"menu",
+		"mobile",
+		"web",
+		"es6"
+	],
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-es2015-destructuring": "^6.23.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-register": "^6.26.0",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^4.0.0",
+		"gulp-babel": "^7.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-rename": "^1.2.2",
+		"gulp-sass": "^3.1.0",
+		"gulp-server-livereload": "^1.9.2",
+		"gulp-sourcemaps": "^2.6.1",
+		"gulp-uglify": "^3.0.0"
+	},
+	"dependencies": {
+		"jquery": "^3.2.1"
+	},
+	"scripts": {
+		"dev": "gulp dev",
+		"precommit": "gulp"
+	}
 }
