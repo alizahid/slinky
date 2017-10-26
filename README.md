@@ -1,3 +1,5 @@
+![](./slinky.png)
+
 # Slinky
 
 Rather sweet menus
