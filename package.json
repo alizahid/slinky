@@ -44,7 +44,9 @@
 		"gulp-sass": "^3.1.0",
 		"gulp-server-livereload": "^1.9.2",
 		"gulp-sourcemaps": "^2.6.1",
-		"gulp-uglify": "^3.0.0"
+		"gulp-uglify": "^3.0.0",
+		"husky": "^0.14.3",
+		"lint-staged": "^4.3.0"
 	},
 	"dependencies": {
 		"jquery": "^3.2.1"
@@ -52,5 +54,11 @@
 	"scripts": {
 		"dev": "gulp dev",
 		"precommit": "gulp"
-	}
+	},
+  "lint-staged": {
+    "*.{js,scss,json}": [
+      "prettier --write --single-quote --no-semi --trailing-comma none",
+      "git add"
+    ]
+  }
 }
