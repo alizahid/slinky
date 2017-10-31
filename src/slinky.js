@@ -343,7 +343,7 @@ class Slinky {
     })
 
     // remove Slinky HTML
-    $('li > a > span')
+    $('li > a > span', menu)
       .contents()
       .unwrap()
 
