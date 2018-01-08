@@ -174,7 +174,7 @@ class Slinky {
 
   // jump to initial active on init
   _jumpToInitial() {
-    const { menu } = this
+    const { menu, settings } = this
 
     // get initial active
     const active = menu.find('.active')
@@ -186,6 +186,10 @@ class Slinky {
       // jump without animation
       this.jump(active, false)
     }
+
+    // set initial height on the menu
+    // to fix the first transition resize bug
+    setTimeout(() => menu.height(menu.outerHeight()), settings.speed)
   }
 
   // slide the menu
