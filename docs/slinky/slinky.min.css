@@ -1,0 +1,82 @@
+.slinky-menu {
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
+  .slinky-menu > ul {
+    left: 0;
+    position: relative;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0); }
+  .slinky-menu ul,
+  .slinky-menu li {
+    list-style: none;
+    margin: 0; }
+  .slinky-menu ul {
+    width: 100%; }
+  .slinky-menu a {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .slinky-menu a span {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      line-height: 1.4; }
+  .slinky-menu li ul {
+    display: none;
+    left: 100%;
+    position: absolute;
+    top: 0; }
+  .slinky-menu .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .slinky-menu .header .title {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      line-height: 1.4;
+      margin: 0;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+
+.slinky-theme-default {
+  background: #f6f7f8; }
+  .slinky-theme-default .title {
+    color: #333;
+    padding: 1em; }
+  .slinky-theme-default li {
+    line-height: 1; }
+  .slinky-theme-default a:not(.back) {
+    color: #333;
+    padding: 1em; }
+    .slinky-theme-default a:not(.back):hover {
+      background: rgba(90, 200, 250, 0.25); }
+    .slinky-theme-default a:not(.back):active {
+      background: rgba(90, 200, 250, 0.5); }
+  .slinky-theme-default .next::after,
+  .slinky-theme-default .back::before {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICAgIDxwYXRoIGQ9Ik0xMi4yMTkgMi4yODFMMTAuNzggMy43MiAxOC4wNjIgMTFIMnYyaDE2LjA2M2wtNy4yODIgNy4yODEgMS40MzggMS40MzggOS05IC42ODctLjcxOS0uNjg3LS43MTl6IiAvPjwvc3ZnPg==) center no-repeat;
+    background-size: 1em;
+    content: '';
+    height: 1em;
+    opacity: 0.25;
+    -webkit-transition: 200ms;
+    transition: 200ms;
+    width: 1em; }
+  .slinky-theme-default .next::after {
+    margin-left: 1em; }
+  .slinky-theme-default .back::before {
+    padding: 1em;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1); }
+  .slinky-theme-default .next:hover::after,
+  .slinky-theme-default .back:hover::before {
+    opacity: 0.75; }
+  .slinky-theme-default .next:active::after,
+  .slinky-theme-default .back:active::before {
+    opacity: 1; }
