@@ -37,16 +37,16 @@
 		"babel-preset-env": "^1.6.1",
 		"babel-register": "^6.26.0",
 		"gulp": "^3.9.1",
-		"gulp-autoprefixer": "^4.0.0",
+		"gulp-autoprefixer": "^4.1.0",
 		"gulp-babel": "^7.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-rename": "^1.2.2",
 		"gulp-sass": "^3.1.0",
 		"gulp-server-livereload": "^1.9.2",
-		"gulp-sourcemaps": "^2.6.1",
+		"gulp-sourcemaps": "^2.6.3",
 		"gulp-uglify": "^3.0.0",
 		"husky": "^0.14.3",
-		"lint-staged": "^4.3.0"
+		"lint-staged": "^6.0.0"
 	},
 	"dependencies": {
 		"jquery": "^3.2.1"
