@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Slinky &mdash; rather sweet menus</title>
+	<meta name="description" content="Slinky &mdash; mobile-like navigation menus with jQuery">
+	<meta name="keywords" content="jquery, javascript, plugin, navigation, nav, mobile, web, menu">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="../dist/slinky.min.css">
+</head>
+
+<body>
+	<header>
+		<h1>Slinky</h1>
+		<p>Rather sweet menus</p>
+		<iframe src="https://ghbtns.com/github-btn.html?user=alizahid&amp;repo=slinky&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+	</header>
+	<main>
+		<section>
+			<h2>Demo</h2>
+			<div id="menu">
+				<ul>
+					<li>
+						<a href="https://designplox.com/">designplox</a>
+					</li>
+					<li>
+						<a href="#">Artists</a>
+						<ul>
+							<li>
+								<a href="#">Aerosmith</a>
+								<ul>
+									<li>
+										<a href="#">Get Your Wings</a>
+										<ul>
+											<li>
+												<a href="#">Same Old Song and Dance</a>
+											</li>
+											<li>
+												<a href="#">Train Kept A-Rollin'</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Eagles</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+										<ul>
+											<li>
+												<a href="#">Hotel California</a>
+											</li>
+											<li>
+												<a href="#">Pretty Maids All in a Row</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Led Zeppelin</a>
+								<ul>
+									<li>
+										<a href="#">Physical Graffiti</a>
+										<ul>
+											<li>
+												<a href="#">Houses of the Holy</a>
+											</li>
+											<li>
+												<a href="#">In My Time of Dying</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Albums</a>
+						<ul>
+							<li>
+								<a href="#">Get Your Wings</a>
+								<ul>
+									<li>
+										<a href="#">Same Old Song and Dance</a>
+									</li>
+									<li>
+										<a href="#">Train Kept A-Rollin'</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Hotel California</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+									</li>
+									<li>
+										<a href="#">Pretty Maids All in a Row</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Physical Graffiti</a>
+								<ul>
+									<li>
+										<a href="#">Houses of the Holy</a>
+									</li>
+									<li>
+										<a href="#">In My Time of Dying</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Songs</a>
+						<ul>
+							<li>
+								<a href="#">Hotel California</a>
+							</li>
+							<li>
+								<a href="#">Houses of the Holy</a>
+							</li>
+							<li>
+								<a href="#">In My Time of Dying</a>
+							</li>
+							<li>
+								<a href="#">Pretty Maids All in a Row</a>
+							</li>
+							<li>
+								<a href="#">Same Old Song and Dance</a>
+							</li>
+							<li>
+								<a href="#">Train Kept A-Rollin'</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Genres</a>
+						<ul>
+							<li>
+								<a href="#">Rock</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+									</li>
+									<li>
+										<a href="#">Pretty Maids All in a Row</a>
+									</li>
+									<li>
+										<a href="#">Same Old Song and Dance</a>
+									</li>
+									<li>
+										<a href="#">Train Kept A-Rollin'</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Hard rock</a>
+								<ul>
+									<li>
+										<a href="#">Houses of the Holy</a>
+									</li>
+									<li>
+										<a href="#">In My Time of Dying</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Settings</a>
+						<ul>
+							<li>
+								<a href="#">Profile</a>
+							</li>
+							<li>
+								<a href="#">Player</a>
+								<ul>
+									<li>
+										<a href="#">Equalizer</a>
+									</li>
+									<li>
+										<a href="#">Volume</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>Usage</h2>
+			<code>const slinky = $(&#8230;).slinky(options)</code>
+		</section>
+		<section>
+			<h2>Options</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Default</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><em>resize</em></td>
+						<td><em>true</em></td>
+						<td>Resize menu height to match content on navigation</td>
+					</tr>
+					<tr>
+						<td><em>speed</em></td>
+						<td>300</td>
+						<td>Transition speed in <em>milliseconds</em></td>
+					</tr>
+					<tr>
+						<td><em>theme</em></td>
+						<td>slinky-theme-default</td>
+						<td>Slinky theme</td>
+					</tr>
+					<tr>
+						<td><em>title</em></td>
+						<td><em>false</em></td>
+						<td>Show title of sub menu</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>API</h2>
+			<h3>.home(<em>animate</em>)</h3>
+			<p>Navigate back to the root menu</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Default</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><em>animate</em></td>
+						<td><em>true</em></td>
+						<td>Pass <em>false</em> to skip animation</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>.jump(<em>target</em>, <em>animate</em>)</h3>
+			<p>Navigate to a sub menu</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Default</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><em>target</em></td>
+						<td>&ndash;</td>
+						<td>Selector for <em>ul</em> target to jump to</td>
+					</tr>
+					<tr>
+						<td><em>animate</em></td>
+						<td><em>true</em></td>
+						<td>Pass <em>false</em> to skip animation</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>.destroy()</h3>
+			<p>Remove Slinky</p>
+		</section>
+		<section>
+			<h2>Tips</h2>
+			<p>Set <em>.active</em> on a <em>ul</em> element to jump there on init</p>
+		</section>
+	</main>
+	<footer>
+		Made with <img src="heart.svg" alt="love"> by <a href="http://designplox.com/">Ali Zahid</a>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="../dist/slinky.min.js"></script>
+	<script>
+		const slinky = $('#menu').slinky()
+	</script>
+</body>
+
+</html>
