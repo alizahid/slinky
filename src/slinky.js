@@ -30,7 +30,7 @@ class Slinky {
   // setup the DOM just for us
   _init(element) {
     // the two elements of water and moisture
-    this.menu = $(element)
+    this.menu = jQuery(element)
     this.base = this.menu.children().first()
 
     const { base, menu, settings } = this
@@ -42,34 +42,34 @@ class Slinky {
     this._transition(settings.speed)
 
     // add arrows to links with children
-    $('a + ul', menu)
+    jQuery('a + ul', menu)
       .prev()
       .addClass('next')
 
     // wrap link text with <span>
     // mostly for styling
-    $('li > a', menu).wrapInner('<span>')
+    jQuery('li > a', menu).wrapInner('<span>')
 
     // create header item
-    const header = $('<li>').addClass('header')
+    const header = jQuery('<li>').addClass('header')
 
     // prepend it to the list
-    $('li > ul', menu).prepend(header)
+    jQuery('li > ul', menu).prepend(header)
 
     // create back buttons
-    const back = $('<a>')
+    const back = jQuery('<a>')
       .prop('href', '#')
       .addClass('back')
 
     // prepend them to the headers
-    $('.header', menu).prepend(back)
+    jQuery('.header', menu).prepend(back)
 
     // do we need to add titles?
     if (settings.title) {
       // loop through each child list
-      $('li > ul', menu).each((index, element) => {
+      jQuery('li > ul', menu).each((index, element) => {
         // get the label from the parent link
-        const label = $(element)
+        const label = jQuery(element)
           .parent()
           .find('a')
           .first()
@@ -77,12 +77,12 @@ class Slinky {
 
         // if it's not empty, create the title
         if (label) {
-          const title = $('<header>')
+          const title = jQuery('<header>')
             .addClass('title')
             .text(label)
 
           // append it to the immediate header
-          $('> .header', element).append(title)
+          jQuery('> .header', element).append(title)
         }
       })
     }
@@ -98,7 +98,7 @@ class Slinky {
   _addListeners() {
     const { menu, settings } = this
 
-    $('a', menu).on('click', e => {
+    jQuery('a', menu).on('click', e => {
       // prevent broken/half transitions
       if (this._clicked + settings.speed > Date.now()) {
         return false
@@ -108,7 +108,7 @@ class Slinky {
       this._clicked = Date.now()
 
       // get the link
-      const link = $(e.currentTarget)
+      const link = jQuery(e.currentTarget)
 
       // prevent default if it's a hash
       // or a Slinky button
@@ -233,7 +233,7 @@ class Slinky {
 
     const { menu, settings } = this
 
-    const to = $(target)
+    const to = jQuery(target)
 
     // get all current active
     const active = menu.find('.active')
@@ -323,11 +323,11 @@ class Slinky {
     const { base, menu } = this
 
     // remove all headers
-    $('.header', menu).remove()
+    jQuery('.header', menu).remove()
 
     // remove Slinky links
     // and click listeners
-    $('a', menu)
+    jQuery('a', menu)
       .removeClass('next')
       .off('click')
 
@@ -343,7 +343,7 @@ class Slinky {
     })
 
     // remove Slinky HTML
-    $('li > a > span', menu)
+    jQuery('li > a > span', menu)
       .contents()
       .unwrap()
 
