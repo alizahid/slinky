@@ -6,7 +6,7 @@ Rather sweet menus
 
 A light-weight, responsive, mobile-like navigation menu plugin
 
-### [Demo](http://alizahid.github.io/slinky/)
+### [Demo](https://alizahid.github.io/slinky/)
 
 ## Installation
 
