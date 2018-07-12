@@ -2,7 +2,11 @@
 	"name": "jquery-slinky",
 	"description": "Rather sweet menus",
 	"version": "4.1.0",
-	"main": ["dist/slinky.min.js", "dist/slinky.min.css"],
+  "license": "MIT",
+	"main": [
+    "dist/slinky.min.js",
+    "dist/slinky.min.css"
+  ],
 	"homepage": "https://alizahid.github.com/slinky",
 	"authors": [
 		{
@@ -15,9 +19,7 @@
 		"type": "git",
 		"url": "https://github.com/alizahid/slinky.git"
 	},
-	"license": "MIT",
 	"private": false,
-	"license": "MIT",
 	"keywords": [
 		"jquery",
 		"javascript",
@@ -27,9 +29,9 @@
 		"menu",
 		"mobile",
 		"web",
-		"es6"
+		"es8"
 	],
 	"dependencies": {
-		"jquery": "^3.2.1"
+		"jquery": "^3.3.1"
 	}
 }

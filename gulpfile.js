@@ -1,11 +1,11 @@
-import gulp from 'gulp'
+const gulp = require('gulp')
 
-import autoprefixer from 'gulp-autoprefixer'
-import babel from 'gulp-babel'
-import rename from 'gulp-rename'
-import sass from 'gulp-sass'
-import sourcemaps from 'gulp-sourcemaps'
-import uglify from 'gulp-uglify'
+const autoprefixer = require('gulp-autoprefixer')
+const babel = require('gulp-babel')
+const rename = require('gulp-rename')
+const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const uglify = require('gulp-uglify')
 
 gulp.task('slinky-js', () =>
   gulp
@@ -29,7 +29,11 @@ gulp.task('slinky-css', () =>
 
 gulp.task('docs', () =>
   gulp
-    .src(['dist/slinky.min.css', 'dist/slinky.min.js', 'dist/slinky.min.js.map'])
+    .src([
+      'dist/slinky.min.css',
+      'dist/slinky.min.js',
+      'dist/slinky.min.js.map'
+    ])
     .pipe(gulp.dest('docs/slinky'))
 )
 
