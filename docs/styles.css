@@ -73,13 +73,6 @@ h2 {
   position: relative;
 }
 
-h2::before {
-  content: '';
-  height: 1px;
-  position: absolute;
-  width: 100%;
-}
-
 h3 {
   color: #5ac8fa;
   font-size: 1.25em;
