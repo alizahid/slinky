@@ -17,57 +17,65 @@ Download the [latest version](https://github.com/alizahid/slinky/releases). The 
 
 ### Bower
 
-	bower install jquery-slinky
+```
+bower install jquery-slinky
+```
 
 Include these files
 
-	<script src="bower_components/slinky/dist/slinky.min.js"></script>
-
-	<link rel="stylesheet" src="bower_components/slinky/dist/slinky.min.css">
+```html
+<link rel="stylesheet" src="bower_components/slinky/dist/slinky.min.css" />
+<script src="bower_components/slinky/dist/slinky.min.js"></script>
+```
 
 ### NPM
 
-	npm install jquery-slinky
+```
+npm install jquery-slinky
+```
 
 Include these files
 
-	<script src="node_modules/slinky/dist/slinky.min.js"></script>
-
-	<link rel="stylesheet" src="node_modules/slinky/dist/slinky.min.css">
+```html
+<link rel="stylesheet" src="node_modules/slinky/dist/slinky.min.css" />
+<script src="node_modules/slinky/dist/slinky.min.js"></script>
+```
 
 ## Usage
 
-    const slinky = $('.menu').slinky(options)
+```javascript
+const slinky = $('.menu').slinky(options)
+```
 
 ## Options
 
-Option | Default | Description
------- | ------- | -----------
-`resize` | `true` | Resize menu height to match content on navigation
-`speed` | `300` | Animation speed in `milliseconds`
-`theme` | `slinky-theme-default` | Slinky theme
-`title` | `false` | Show title of sub menu
+| Option   | Default                | Description                                       |
+| -------- | ---------------------- | ------------------------------------------------- |
+| `resize` | `true`                 | Resize menu height to match content on navigation |
+| `speed`  | `300`                  | Animation speed in `milliseconds`                 |
+| `theme`  | `slinky-theme-default` | Slinky theme                                      |
+| `title`  | `false`                | Show title of sub menu                            |
 
 ## API
 
-### .home(`animate`)
+### `.home(animate)`
 
 Navigate back to the root menu
 
-Option | Default value | Description
------- | ------------- | -----------
-`animate` | `true` | Pass `false` to skip animation
+| Option    | Default value | Description                    |
+| --------- | ------------- | ------------------------------ |
+| `animate` | `true`        | Pass `false` to skip animation |
 
-### .jump(`target`, `animate`)
+### `.jump(target, animate)`
 
 Navigate to a sub menu
 
-Option | Default value | Description
------- | ------------- | -----------
-`to` |  | Selector for `ul` target to jump to
-`animate` | `true` | Pass `false` to skip animation
+| Option    | Default value | Description                         |
+| --------- | ------------- | ----------------------------------- |
+| `to`      |               | Selector for `ul` target to jump to |
+| `animate` | `true`        | Pass `false` to skip animation      |
 
-### .destroy()
+### `.destroy()`
 
 Remove Slinky
 

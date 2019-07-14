@@ -1,37 +1,34 @@
 {
-	"name": "jquery-slinky",
-	"description": "Rather sweet menus",
-	"version": "4.1.0",
+  "name": "jquery-slinky",
+  "description": "Rather sweet menus",
+  "version": "4.2.0",
   "license": "MIT",
-	"main": [
-    "dist/slinky.min.js",
-    "dist/slinky.min.css"
+  "main": ["dist/slinky.min.js", "dist/slinky.min.css"],
+  "homepage": "https://alizahid.github.com/slinky",
+  "authors": [
+    {
+      "name": "Ali Zahid",
+      "email": "ali.zahid@live.com",
+      "homepage": "https://designplox.com/"
+    }
   ],
-	"homepage": "https://alizahid.github.com/slinky",
-	"authors": [
-		{
-			"name": "Ali Zahid",
-			"email": "ali.zahid@live.com",
-			"homepage": "https://designplox.com/"
-		}
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/alizahid/slinky.git"
-	},
-	"private": false,
-	"keywords": [
-		"jquery",
-		"javascript",
-		"plugin",
-		"navigation",
-		"nav",
-		"menu",
-		"mobile",
-		"web",
-		"es8"
-	],
-	"dependencies": {
-		"jquery": "^3.3.1"
-	}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alizahid/slinky.git"
+  },
+  "private": false,
+  "keywords": [
+    "jquery",
+    "javascript",
+    "plugin",
+    "navigation",
+    "nav",
+    "menu",
+    "mobile",
+    "web",
+    "es8"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
