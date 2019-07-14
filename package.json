@@ -4,7 +4,7 @@
   "version": "4.2.0",
   "license": "MIT",
   "main": "dist/slinky.min.js",
-  "homepage": "https://alizahid.github.com/slinky",
+  "homepage": "https://slinky.js.org",
   "private": false,
   "author": {
     "name": "Ali Zahid",
