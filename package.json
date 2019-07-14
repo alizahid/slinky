@@ -1,7 +1,7 @@
 {
   "name": "jquery-slinky",
   "description": "Rather sweet menus",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "license": "MIT",
   "main": "dist/slinky.min.js",
   "homepage": "https://slinky.js.org",
@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --watch",
     "docs": "cp -r dist docs"
   },
   "peerDependencies": {

@@ -1,6 +1,6 @@
 /*
  * Slinky
- * Rather sweetmenus
+ * Rather sweet menus
  * @author Ali Zahid <ali.zahid@live.com>
  * @license MIT
  */
@@ -33,7 +33,7 @@ class Slinky {
     this.menu = jQuery(element)
     this.base = this.menu.children().first()
 
-    const { base, menu, settings } = this
+    const { menu, settings } = this
 
     // set theme
     menu.addClass('slinky-menu').addClass(settings.theme)
@@ -264,7 +264,7 @@ class Slinky {
     // show parent list
     menus.show()
 
-    //
+    // show target
     to.show().addClass('active')
 
     // set transition speed to 0 if no animation
