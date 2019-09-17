@@ -12,7 +12,8 @@ class Slinky {
       resize: true,
       speed: 300,
       theme: 'slinky-theme-default',
-      title: false
+      title: false,
+      linkTitle: false
     }
   }
 
@@ -68,18 +69,26 @@ class Slinky {
     if (settings.title) {
       // loop through each child list
       jQuery('li > ul', menu).each((index, element) => {
-        // get the label from the parent link
-        const label = jQuery(element)
+        const target = jQuery(element)
           .parent()
           .find('a')
           .first()
-          .text()
+
+        // get the label from the parent link
+        const label = target.text()
+
+        // get the url from the parent link
+        const url = settings.linkTitle && target.attr('href')
 
         // if it's not empty, create the title
         if (label) {
-          const title = jQuery('<header>')
+          const htmlTag = url ? '<a>' : '<header>'
+          const title = jQuery(htmlTag)
             .addClass('title')
             .text(label)
+
+          // if url exists and the linkTitle option is set to true add url to header
+          url && title.attr('href', url)
 
           // append it to the immediate header
           jQuery('> .header', element).append(title)

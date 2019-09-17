@@ -57,6 +57,7 @@ a:active {
 
 code {
   font-family: 'Consolas', monospace;
+  text-transform: initial;
 }
 
 h1,

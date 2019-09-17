@@ -49,12 +49,13 @@ const slinky = $('.menu').slinky(options)
 
 ## Options
 
-| Option   | Default                | Description                                       |
-| -------- | ---------------------- | ------------------------------------------------- |
-| `resize` | `true`                 | Resize menu height to match content on navigation |
-| `speed`  | `300`                  | Animation speed in `milliseconds`                 |
-| `theme`  | `slinky-theme-default` | Slinky theme                                      |
-| `title`  | `false`                | Show title of sub menu                            |
+| Option      | Default                | Description                                       |
+| ----------- | ---------------------- | ------------------------------------------------- |
+| `resize`    | `true`                 | Resize menu height to match content on navigation |
+| `speed`     | `300`                  | Animation speed in `milliseconds`                 |
+| `theme`     | `slinky-theme-default` | Slinky theme                                      |
+| `title`     | `false`                | Show title of sub menu                            |
+| `linkTitle` | `false`                | Make title of sub menu a link<                    |
 
 ## API
 
